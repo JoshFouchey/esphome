@@ -13,11 +13,11 @@ mqtt:
   username: !secret mqtt_username
   password: !secret mqtt_password
   birth_message:
-    topic: status
+    topic: sensor/1/status
     payload: 1
     retain: true
   will_message:
-    topic: status
+    topic: sensor/1/status
     payload: 0
     retain: true
 
@@ -57,7 +57,7 @@ wifi:
     password: ""
 
 deep_sleep:
-  run_duration: 1min
-  sleep_duration: 1min
+  run_duration: 20s
+  sleep_duration: 10min
 
 captive_portal:
